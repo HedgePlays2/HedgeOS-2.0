@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#desktop {
+  position: fixed;
+  inset: 0;
+  background: url('https://wallpaperaccess.com/full/85153.jpg') center/cover no-repeat;
+}
+
+#shelf {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: rgba(20, 20, 20, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+#launcher-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.app-icon {
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
