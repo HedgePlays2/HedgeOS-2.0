@@ -38,3 +38,35 @@ body {
   padding: 6px 10px;
   cursor: pointer;
 }
+.window {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  background: #202124;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.window-titlebar {
+  height: 36px;
+  background: #303134;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.window-content {
+  width: 100%;
+  height: calc(100% - 36px);
+  background: #181818;
+}
+.close-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
