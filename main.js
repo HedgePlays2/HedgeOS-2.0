@@ -28,8 +28,11 @@ document.querySelectorAll('.app-icon').forEach(btn => {
     const app = btn.dataset.app;
     if (app === 'youtube') {
       createWindow('YouTube', `
-        <iframe src="https://www.youtube.com" 
-                style="width:100%;height:100%;border:none;"></iframe>
+        <iframe 
+  src="https://www.youtube.com/embed/?list=WL"
+  allow="fullscreen"
+  style="width:100%;height:100%;border:none;">
+</iframe>
       `);
     } else if (app === 'docs') {
       createWindow('Google Docs', `
