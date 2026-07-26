@@ -29,7 +29,7 @@ document.querySelectorAll('.app-icon').forEach(btn => {
     if (app === 'youtube') {
       createWindow('YouTube', `
         <iframe 
-  src="https://www.youtube.com/embed/?list=WL"
+  src="https://www.youtube.com/"
   allow="fullscreen"
   style="width:100%;height:100%;border:none;">
 </iframe>
