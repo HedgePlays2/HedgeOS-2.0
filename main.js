@@ -69,6 +69,66 @@ document.querySelectorAll('.app-icon').forEach(btn => {
   document.getElementById('wallpaper3').onclick = () => {
     document.getElementById('desktop').style.background = "#000";
   };
+        if (app === 'settings') {
+  createWindow('Settings', `
+    <div id="settings-container" style="display:flex; height:100%; font-family:sans-serif; color:white;">
+      
+      <!-- Sidebar -->
+      <div id="settings-sidebar" style="width:220px; background:#2d2f31; padding:20px; box-sizing:border-box;">
+        <h2 style="margin-top:0;">Settings</h2>
+        <div class="settings-item" data-section="appearance">Appearance</div>
+        <div class="settings-item" data-section="about">About</div>
+      </div>
+
+      <!-- Main content -->
+      <div id="settings-main" style="flex:1; padding:20px;">
+        <h2>Welcome</h2>
+        <p>Select a category from the left.</p>
+      </div>
+
+    </div>
+  `);
+
+  // Sidebar click logic
+  document.querySelectorAll('.settings-item').forEach(item => {
+    item.onclick = () => {
+      const section = item.dataset.section;
+      const main = document.getElementById('settings-main');
+
+      if (section === 'appearance') {
+        main.innerHTML = `
+          <h2>Appearance</h2>
+          <p>Choose a wallpaper:</p>
+          <button id="wp1">Blue Gradient</button>
+          <button id="wp2">Mountains</button>
+          <button id="wp3">Solid Black</button>
+        `;
+
+        document.getElementById('wp1').onclick = () => {
+          document.getElementById('desktop').style.background =
+            "linear-gradient(135deg, #4285f4, #34a853)";
+        };
+        document.getElementById('wp2').onclick = () => {
+          document.getElementById('desktop').style.background =
+            "url('https://images.unsplash.com/photo-1503264116251-35a269479413') center/cover no-repeat";
+        };
+        document.getElementById('wp3').onclick = () => {
+          document.getElementById('desktop').style.background = "#000";
+        };
+      }
+
+      if (section === 'about') {
+        main.innerHTML = `
+          <h2>About</h2>
+          <p>OS Name: HedgeOS</p>
+          <p>Version: 1.0</p>
+          <p>Made by Hedge</p>
+        `;
+      }
+    };
+  });
+}
+
 }
     }
   });
